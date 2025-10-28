@@ -1,14 +1,16 @@
-import Hero from "./Sections/Hero/Hero"
+import NavBar from "../../components/NaveBar/NavBar"
+import Hero from "../Home/Sections/Hero/Hero"
 
 
+const Home = () => {
 
-const Home = () =>{
-  
-  return (
-    <>
-        <Hero/>
-    </>
-  )
+
+    return (
+        <>
+            <NavBar />
+            <Hero />
+        </>
+    )
 }
 
 export default Home
