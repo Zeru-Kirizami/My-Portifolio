@@ -1,11 +1,13 @@
 import { Box, Container, Grid, Typography, styled } from "@mui/material"
-import Avatar from "../../../../assets/images/IMG_20170102_183459060_HDR.jpg"
-import DownloadIcon from '@mui/icons-material/Download';
-import MailOutlineIcon from '@mui/icons-material/MailOutline';
-import StyledButton from "../../../../components/StyledButton/StyledButton";
 import { AnimatedBackground } from "../../../../components/AnimetedBackground/AnimetedBackground";
+import Avatar from "../../../../assets/images/IMG_20170102_183459060_HDR.jpg"
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import DownloadIcon from '@mui/icons-material/Download';
+import StyledButton from "../../../../components/StyledButton/StyledButton";
+import CV from "../../../../assets/PDFs/Luiz Fernando Editado.pdf" 
 
-const Hero = () => {
+
+const Hero: React.FC = () => {
 
     const StyledHero = styled("div")(({ theme }) => ({
         backgroundColor: theme.palette.primary.main,
@@ -27,6 +29,29 @@ const Hero = () => {
         border: `1px solid ${theme.palette.primary.contrastText}`
     }))
 
+    const handleDownload = () => {
+        console.log("download")
+        // Create a link element
+        const link = document.createElement('a');
+        link.href = CV
+        link.download = 'example.pdf'; // Set the download attribute to specify the file name
+        // Append the link to the body
+        document.body.appendChild(link);
+        // Trigger the click event
+        link.click();
+        // Remove the link from the body
+        document.body.removeChild(link);
+    };
+
+      const handleEmail = () => {
+        const emailAddress = 'example@example.com';
+        const subject = 'Subject';
+        const body = 'Hello! I saw your portfolio...';
+
+        const mailtoLink = `mailto:${emailAddress}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        window.open(mailtoLink);
+    }
+
     return (
         <>
             <StyledHero>
@@ -47,7 +72,7 @@ const Hero = () => {
                             <Typography color="primary.contrastText" variant="h2" textAlign="center" >I'm a Software Engineer</Typography>
                             <Grid container display="flex" justifyContent="center" spacing={3} pt={3}>
                                 <Grid item xs={12} md={4} display="flex" justifyContent="center">
-                                    <StyledButton>
+                                    <StyledButton onClick={() => handleDownload()}>
                                         <DownloadIcon />
                                         <Typography>
                                             Download CV
@@ -55,7 +80,7 @@ const Hero = () => {
                                     </StyledButton>
                                 </Grid>
                                 <Grid item xs={12} md={4} display="flex" justifyContent="center">
-                                    <StyledButton>
+                                    <StyledButton onClick={() => handleDownload()}>
                                         <MailOutlineIcon />
                                         <Typography>
                                             Contact me
