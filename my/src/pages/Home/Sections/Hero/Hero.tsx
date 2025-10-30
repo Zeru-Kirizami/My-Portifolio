@@ -69,7 +69,7 @@ const Hero: React.FC = () => {
                         </Grid>
                         <Grid item xs={12} md={7}>
                             <Typography color="primary.contrastText" variant="h1" textAlign="center" pb={2}>Luiz Fernando</Typography>
-                            <Typography color="primary.contrastText" variant="h2" textAlign="center" >I'm a Software Engineer</Typography>
+                            <Typography color="primary.contrastText" variant="h2" textAlign="center" >Eu sou um Engenheiro<br /> de Software</Typography>
                             <Grid container display="flex" justifyContent="center" spacing={3} pt={3}>
                                 <Grid item xs={12} md={4} display="flex" justifyContent="center">
                                     <StyledButton onClick={() => handleDownload()}>

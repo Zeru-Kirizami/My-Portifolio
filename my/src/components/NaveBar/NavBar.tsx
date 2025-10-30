@@ -90,13 +90,13 @@ export default function Navbar() {
                 </StyledMobileToolbar>
                 <StyledDesktopToolbar variant="regular">
                     <MenuItem onClick={() => handleSmoothScroll("about")}>
-                        <StyledNavLink>About</StyledNavLink>
+                        <StyledNavLink>Sobre mim</StyledNavLink>
                     </MenuItem>
                     <MenuItem onClick={() => handleSmoothScroll("skills")}>
-                        <StyledNavLink>Skills</StyledNavLink>
+                        <StyledNavLink>Habilidades</StyledNavLink>
                     </MenuItem>
                     <MenuItem onClick={() => handleSmoothScroll("projects")}>
-                        <StyledNavLink>Projects</StyledNavLink>
+                        <StyledNavLink>Projetos</StyledNavLink>
                     </MenuItem>
                 </StyledDesktopToolbar>
             </AppBar>

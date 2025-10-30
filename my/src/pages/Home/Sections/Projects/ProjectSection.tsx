@@ -1,6 +1,7 @@
 import { Box, Container, Grid, Typography, styled } from "@mui/material";
 import ProjectCard, { type ProjectCardProps } from "../../../../components/ProjectCard/ProjectCard";
 import AnimationComponent from "../../../../components/AnimationComponent/AnimationComponent";
+import { Subtitles } from "@mui/icons-material";
 
 const ProjectsSection: React.FC = () => {
 
@@ -11,48 +12,69 @@ const ProjectsSection: React.FC = () => {
 
     const projects = [
         {
-            title: "Project Exemple",
+            title: "Exemplos de Projeto Batman",
             subtitle: "Jul 2023 - Dez 2023",
-            srcImg: "/src/assets/images/project-trello.png",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras porta semper velit vel rutrum. Aliquam vulputate, nisi eget tristique mattis, nisi sem faucibus eros, a auctor felis sem ut mauris. Phasellus a ultrices elit. Curabitur ut diam eu orci auctor pretium.",
-            technologies: "Technologies: JavaScript, HTML, CSS, Canvas Graphics",
+            srcImg: "/src/assets/images/Batman 1.png",
+            description: "Um dos meus primeiros projetos, essa landing page foi totalmente construida em Html, CSS e JavaScript.",
+            technologies: "Technologies: HTML, CSS, JavaScript",
             websiteURL: "https://trello.com/",
             codeURL: "https://github.com/",
         },
+        
         {
-            title: "Project Exemple",
+            title: "Exemplos de Projeto Fotos",
             subtitle: "Jul 2023 - Dez 2023",
-            srcImg: "/src/assets/images/project-financas.png",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras porta semper velit vel rutrum. Aliquam vulputate, nisi eget tristique mattis, nisi sem faucibus eros, a auctor felis sem ut mauris. Phasellus a ultrices elit. Curabitur ut diam eu orci auctor pretium.",
-            technologies: "Technologies: JavaScript, HTML, CSS, Canvas Graphics",
+            srcImg: "/src/assets/images/Batman 4.png",
+            description: "Essa parte da landing page foi contruida também em Html, CSS e JavaScript e possui um Script para abrir cada foto em uma nova janela e em Zoom.",
+            technologies: "Technologies: HTML, CSS, JavaScript",
             websiteURL: "https://trello.com/",
             codeURL: "https://github.com/",
         },
+        
         {
-            title: "Project Craze Maze",
-            subtitle: "Jul 2019 - May 2019",
-            srcImg: "/src/assets/images/project1-craze-maze.gif",
-            description: "Game to escape the maze, but not only that. An algorithm has been created that randomly generates a new maze each time the game is started. In this game, the user can use the keyboard keys to move until they find the flag and win the game",
-            technologies: "Technologies: JavaScript, HTML, CSS, Canvas Graphics",
+            title: "Exemplos de Projeto Tela inteira",
+            subtitle: "Jul 2023 - May 2023",
+            srcImg: "/src/assets/images/Batman 2.png",
+            description: "Nesta mostro como ficou a visão do site com um zoom out para que possa ser visto como ficou cada sessão.",
+            technologies: "Technologies:  HTML, CSS, JavaScript",
             websiteURL: "https://adrianasaty.github.io/ironhack-project1-craze-maze/index.html",
             codeURL: "https://github.com/AdrianaSaty/ironhack-project1-craze-maze",
         },
         {
-            title: "Project Blotting",
-            subtitle: "Jul 2019 - May 2019",
-            srcImg: "/src/assets/images/project2-blotting.png",
-            description: "Game to escape the maze, but not only that. An algorithm has been created that randomly generates a new maze each time the game is started. In this game, the user can use the keyboard keys to move until they find the flag and win the game",
-            technologies: "Technologies: JavaScript, HTML, CSS, Canvas Graphics",
+            title: "Exemplo de Projeto Justly",
+            subtitle: "Jul 2024 - May 2024",
+            srcImg: "/src/assets/images/Justly 1.png",
+            description: "Site construido como parte do meu treinamento/aprendizado visando usar mais ferramentas e recursos, também foram usados Html, CSS e JavaScript.",
+            technologies: "Technologies: HTML, CSS, JavaScript",
             websiteURL: "https://adrianasaty.github.io/ironhack-project1-craze-maze/index.html",
             codeURL: "https://github.com/AdrianaSaty/ironhack-project1-craze-maze",
         },
+        {
+            title: "Exemplo de Projeto Justly",
+            subtitle: "Jul 2024 - May 2024",
+            srcImg: "/src/assets/images/Justly 4.png",
+            description: "Aqui mostro uma segunda parte da landing page com alguns elementos em destaques, fazendo um chamariz para os clientes que podem dar suas opniões.",
+            technologies: "Technologies: HTML, CSS, JavaScript",
+            websiteURL: "https://adrianasaty.github.io/ironhack-project1-craze-maze/index.html",
+            codeURL: "https://github.com/AdrianaSaty/ironhack-project1-craze-maze",
+        },   
+        {
+            title: "Exemplo de Projeto Justly",
+            subtitle: "Jul 2024 - May 2024",
+            srcImg: "/src/assets/images/Justly 5.png",
+            description: "Como essa landing Page ficou bem grande evitei colocar toda ela aqui em breve estarei subindo ela para um repositório e poderá ser vista por completo, dito isso fechei com o rodapé do site",
+            technologies: "Technologies: HTML, CSS, JavaScript",
+            websiteURL: "https://adrianasaty.github.io/ironhack-project1-craze-maze/index.html",
+            codeURL: "https://github.com/AdrianaSaty/ironhack-project1-craze-maze",
+        },
+
     ]
 
     return (
         <StyledExperience>
             <Container maxWidth="lg">
                 <Box id="projects" pt={5} pb={3}>
-                    <Typography variant="h2" textAlign="center" color="primary.contrastText">Projects</Typography>
+                    <Typography variant="h2" textAlign="center" color="primary.contrastText">Projetos</Typography>
                 </Box>
                 <Grid container spacing={5} pb={3}>
                     {projects.map((project: ProjectCardProps, index: number) => (
